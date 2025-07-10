@@ -1,0 +1,34 @@
+name: Run Pytest with CML Report
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install cml
+
+    - name: Run pytest and capture output
+      run: |
+        pytest tests/ > result.log || true
+
+    - name: Create CML Report Comment
+      env:
+        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "## ✅ Test Report via CML" > report.md
+        tail -n 50 result.log >> report.md
+        cml comment create report.md
