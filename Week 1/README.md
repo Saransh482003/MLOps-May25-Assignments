@@ -1,5 +1,5 @@
 ### Video ScreenCast
-Link:  (https://drive.google.com/file/d/1UgrgzoPiJEAi7rkJJL_gGnUl7rl5zZCl/view?usp=drive_link)[https://drive.google.com/file/d/1UgrgzoPiJEAi7rkJJL_gGnUl7rl5zZCl/view?usp=drive_link]
+Link:  [https://drive.google.com/file/d/1UgrgzoPiJEAi7rkJJL_gGnUl7rl5zZCl/view?usp=drive_link](https://drive.google.com/file/d/1UgrgzoPiJEAi7rkJJL_gGnUl7rl5zZCl/view?usp=drive_link)
 
 ### Files
 - **22F1001123_Week_1_code.ipynb** : The code file for the assignment *[.ipynb]*
